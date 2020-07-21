@@ -10,7 +10,8 @@ public class FarmaController {
 
 	@GetMapping("/farma")
 	public String farma(@RequestParam(value = "comuna") String comuna) {
-		//return new Greeting(counter.incrementAndGet(), String.format(template, name));
-        return "Hello world";
+		FarmaService service = new FarmaService();
+		return service.getFarma();
+        //return "Hello world";
 	}
 }
